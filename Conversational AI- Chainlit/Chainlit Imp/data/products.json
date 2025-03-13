@@ -1,0 +1,6 @@
+
+[
+    {"id": 1, "name": "Wireless Headphones", "price": 59.99, "stock": 10, "category": "electronics"},
+    {"id": 2, "name": "Running Shoes", "price": 79.99, "stock": 5, "category": "footwear"},
+    {"id": 3, "name": "Coffee Maker", "price": 34.99, "stock": 15, "category": "appliances"}
+]

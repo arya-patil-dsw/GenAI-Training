@@ -1,0 +1,1 @@
+2025-03-19 13:17:10,462 - litellm-proxy - WARNING - Redis cache initialization failed: DualCache.__init__() got an unexpected keyword argument 'cache_type'. Using in-memory cache.

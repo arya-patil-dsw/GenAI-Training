@@ -1,0 +1,24 @@
+version: '3.8'  # Stable Docker Compose version
+
+services:
+  db:
+    image: pgvector/pgvector:pg16  # Stable PostgreSQL 16 with pgvector
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ragdb
+    volumes:
+      - D:/Postgres/postgres-data:/var/lib/postgresql/data  # Fresh volume
+    ports:
+      - "5432:5432"
+    command: postgres -c shared_preload_libraries=vector
+
+  pgadmin:
+    image: dpage/pgadmin4:8.5  # Stable pgAdmin version
+    environment:
+      PGADMIN_DEFAULT_EMAIL: patilarya3133@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
